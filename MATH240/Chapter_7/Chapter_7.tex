@@ -1,0 +1,103 @@
+\documentclass{article}
+
+\usepackage{mathtools}
+\title{Chapter 7}
+\author{Brian Huang}
+\date{December 2, 2023}
+\begin{document}
+\setlength{\parindent}{0pt}%
+    \maketitle
+    \newpage
+    \section*{7.1 Diagonalization of Symmetric Matrices}
+    \textbf{Definition:}
+    A symmetric matrix is a matrix $A$ such that  $A^T=A$\\
+    This means:\\
+    $A$ will be square
+    The diagonals can be arbitrary but its other entries occur in pairs- on opposite sides of the main diagonal.
+\\\\
+    \textbf{Example}\\
+    Symmetric Matrices:
+    \begin{center}
+        \[
+        \begin{bmatrix*}[r]
+             1 & 0\\
+             0 & -3
+        \end{bmatrix*}
+        ,
+        \begin{bmatrix*}[r]
+            0 & -1 & 0\\
+            -1 & 5 & 8\\
+            0 & 8 & 7
+            
+
+        \end{bmatrix*}
+        ,
+        \begin{bmatrix*}[r]
+            $a$ & $b$ & $c$ \\
+            $b$ & $d$ & $e$\\
+            $c$ & $e$ & $f$
+        \end{bmatrix*}
+    
+        
+        \]
+
+    \end{center}
+
+
+    \\
+    Non-Symmetric Matrices:
+    \begin{center}
+        \[
+        \begin{bmatrix*}[r]
+            1 & -3\\
+            3 & 0\\
+        \end{bmatrix*}
+        ,
+        \begin{bmatrix*}[r]
+            1 & -4 & 0\\
+            -6 & 1 & -4\\
+            0 & -6 & 1
+        \end{bmatrix*}
+
+
+    \]
+    \end{center}
+    \\
+    \textbf{Theorem}\\
+    If $A$ is symmetric, then any two eigenvectors from different eigenspaces are orthogonal.\\
+
+    \textbf{Theorem}
+   
+    
+
+    \\
+    An $n*n$ matrix is orthogonally diagonizable if and only if A is a symmetric matrix.\\
+
+    \textbf{Theorem}
+    The Spectral Theorem for Symmetric Matrices: \\
+    An $n*n$ symmetric matrix $A$ has the following properties:\\
+    1) $A$ has $n$ real eignvalues, counting multiplicites.\\
+    2) The dimension of the eigenspace for each eigenvalue $\lambda$ equals the multiplcity of $\lambda$ as a root of the characteristic equation.\\
+    3) The eigenspaces are mutually orthogonal.\\
+    4) $A$ is orthogonally diagonalizable. 
+
+    \subsection*{Spectral Decomposition}
+    If $A = PDP^{-1}$, where the columns of P are orthonormal eigenvectors $u_1,...,u_n$ of $A$ and the 
+    corresponding eigenvalues $\lambda_1,....,\lambda_n$ are in the diagonal matrix  $D$.\\
+    Then, $P^T = P^{-1}$
+    \\
+    \\
+    \\
+    The following equation represents A as a spectral decomposition since it breaks up $A$ into pieces
+    determined by the spectrum (eigenvalues). 
+    \begin{center}
+        $A = \lambda_1 u_1 u_1^T+\lambda_2u_2u_2^T+...+\lambda_nu_nu_n^T$
+    \end{center}
+    
+    \subsection*{Conclusion}
+    So basically...\\
+    Symmetric matrices are matrices where the pairs on opposite sides are equivalent to each other.
+    While the diagonals can be anything. 
+    
+
+    \end{document}

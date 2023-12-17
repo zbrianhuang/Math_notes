@@ -1,0 +1,299 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\title{Chapter 4}
+\author{Brian Huang}
+\date{December 5, 2023}
+
+
+\begin{document}
+    \maketitle
+    \newpage
+    \section*{4.1 Vector Spaces and Subspaces} 
+    
+    \subsection*{Definition: Subspace}
+    A vector space is a set of $V$ objects, called vectors. Vector spaces have two defined operations vector addition and vector multiplcation. Axioms are in textbook.\\
+    Basically, Communtative and Associatve properties of addition and multiplication must hold.\\
+    Additionally, the zero vector must be in the vector space.
+
+    \subsection*{Vector Space: $\mathbb{P}^n$}
+    For the set $\mathbb{P}^n$, for $n\geq 0$, 
+     \begin{center}
+        $p(t) = a_0+a_1t+a_2t^2+...+a_nt^n$
+    \end{center}
+
+    \subsection*{Definition: Vector Space}
+    A subspace of a vector space is a subset $H$ of $V$ that has three properties:\\
+    1. The zero vector of $V$ is in $H$ \\
+    2. $H$ is closed under vector addition.\\
+    3.$H$ is closed under multiplciation of scalars.
+
+    \subsection*{Theorem 1}
+    If $v_1 ,..., v_p$ are in the vector space $V$, then $span\{v_1,...,v_p\}$ is a subspace in $V$.
+    
+
+
+    \section*{4.2 Null Spaces, Column Spaces, and Linear Transformations}
+    \subsection*{Definition: Nullspace}
+    The \textbf{Null Space} of a $m*n$ matrix $A$, writen as $Nul A$, is the set of all solutions that satisfies the homogenous equation $Ax=0$. In set notation this would be:
+    \begin{center}
+        $Nul A = \{x:x $ is in $\mathbb{R}^n$ and $Ax=0\}$
+    \end{center}
+
+    \subsection*{Theorem 2}
+    The null space of a $m \times n$ matrix $A$ is in a subspace of $\mathbb{R}^n$. In other words, the number of components in the nullspace of $A$ will be equal to the number of columns in $A$.
+
+    \subsection*{How to find Nullspace}
+    Given a matrix $A$ :\\
+    1. Row Reduce $A$ to echelon form (RREF is unnecessary).\\
+    2. Create a vector that holds the general solutions. For example:
+    \begin{center}
+        \[
+        \begin{bmatrix}
+            x_1\\
+            x_2\\
+            x_3\\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            2x_2-3x_3\\
+            x_2\\
+            5x_2
+        \end{bmatrix}
+    
+
+    \]
+    \end{center}
+    3. Decompose the vector into a linear combination where the weights are the free variables.
+    \begin{center}
+     $
+     \[
+            x_2
+            \begin{bmatrix}
+                2\\
+                1\\
+                5\\
+            \end{bmatrix}
+            +x_3
+            \begin{bmatrix}
+                -3\\
+                0\\
+                0
+            \end{bmatrix}
+
+
+        \]
+    $
+    \end{center}
+    4. Null space: \\
+    \begin{center}
+        \[
+            Span\{
+                \begin{bmatrix}
+                    2\\
+                    1\\
+                    5
+                \end{bmatrix}
+                ,
+                \begin{bmatrix}
+                    -3\\
+                    0\\
+                    0
+                \end{bmatrix}
+            \}    
+        \]  
+    \end{center}
+    \subsection*{Definition: Column Space}
+    The column space of a $m \times n$ matrix $A$, written as $Col A $ is the set of linear combinations of the columns of $A$. if $A=[a_1,...,a_n]$ then $Col A = span\{a_1,...,a_n\}$.\\
+    In other words, the column space of $A$ is just the linearly indepedent columns of $A$.
+    \subsection*{Theorem 3}
+    The column space of a $m \times n$ matrix $A$ is a subspace of $A$.
+    \subsection*{How to Find Column Space}
+    Given a $m \times n$ matrix $A$.\\
+    1. Row reduce until you can find the pivots.\\
+    2. Take every column that is linearly independent to create a subspace. That subspace will be the column space of A.\\
+    Note: if Ax=b has a solution for each b(one solution), then the column space of $A$ is $A$ itself.
+    \subsection*{Definition: Linear Transformation}
+    A linear transformation $T$ from a vector space $V$ into a Vector Space $W$ is a rule that assigns to each  $x$ in $V$ a unique vector $T(x)$ in  $W$ such that:\\
+    1. $T(u+v) = T(u)+T(v)$\\
+    2. T(cu) = cT(u)\\
+    
+
+    \section*{4.3: Linearly Independent Sets; Bases}
+
+    \subsection*{Theorem 4}
+    An indexed set $\{v_1,...,v_p\}$ of two or more vectors, with $v_1 \neq 0 $, is linearly 
+    dependent if and only if some $v_j$ where ($v_j>1$) is a linear combination of preceding vectors.
+    
+    \subsection*{Definition}
+    Let  $H$ be a subspace of a vector space $V$. An indexed set of vectors $B = \{b_1,...,b_p\}$
+    in $V$ is a basis for $H$ if:\\
+    1. $B$ is a linearly independent set, and\\
+    2. The span of $B$ coincides with $H$ such that $H=span\{b_1,...,b_p \}$
+    
+    \subsection*{Example}
+    $I_2$ identity matrix is the standard basis for $\mathbb{R}^2$\\
+    \begin{center}
+        \begin{bmatrix*}[r]
+            1 & 0\\
+            0 & 1
+        \end{bmatrix*}
+    \end{center}
+    Each vector is independent, so it forms a basis.
+
+
+    \subsection*{Theorem 5}
+    \textbf{Spanning Set Theorem}\\
+    Let $S = \{v_1,...,v_p\}$ and $H = Span\{v_1,...,v_p\}$\\
+    1. If a vector in $S$, $v_k$, is a linear combination of the other Vectors in $S$, then the 
+    set without $v_k$ still spans $H$.\\
+    2. If $H \neq \{0\}$ then some subset of $S$ is a basis for $H$.
+    
+
+    \subsection*{Theorem 6}
+    The pivot columns of $A$ form a basis for $Col A$.
+
+    
+
+    \section*{4.4 Coordinate Systems}
+    \subsection*{Theorem 7}
+    Let $B =\{b_1,...,b_n\}$ be a basis for the vector space $V$. Then for each $x$ in $V$, there
+    exists a unique set of scalars $c_1,...,c_n$ such that 
+    \begin{center}
+        $x = c_1b_1+c_2b_2+...+c_nb_n$
+    \end{center}
+
+    \subsection*{Definition: Coordinates Relative to the Basis $B$ }
+    Suppose $B = \{b_1,...,b_n\}$ is a basis for $V$ and $x$ is in $V$. The coordinates of $x$ 
+    relative to the Basis $B$ are the scalars $c_1,...,c_n$ such that:\\
+    \begin{center}
+        $x = c_1b_1+...+c_nb_n$
+    \end{center} 
+    So basically:
+    \begin{center}
+        $
+        \[
+        [x]_B =
+        \begin{bmatrix*}[r]
+            c_1\\
+            \vdots\\
+            c_n
+        \end{bmatrix*}
+        \]$
+    \end{center}
+
+
+    \subsection*{Example}
+    Let
+    $b_1 = \begin{bmatrix*}[r] 2\\1 \end{bmatrix*}$,
+    $b_2= \begin{bmatrix*}[r] -1\\1 \end{bmatrix*}$,
+    $x= \begin{bmatrix*}[r] 4\\5 \end{bmatrix*}$, and $B = \{b_1,b_2\}$.\\
+   Find the coordinate vector $[x]_B$ of $x$ relative to $B$.
+\\
+   \\
+    Goal: Given $x$ and $B$, find $[x]_B$.\\
+    Basically, find the scalars $c_1,...,c_n$ so that $[x]_B=c_1b_1+...+c_nb_n $.
+    \begin{center}
+    \[
+        $[x]_B = c_1\begin{bmatrix*}[r] 2\\1 \end{bmatrix*} + c_2\begin{bmatrix*}[r] -1\\1 \end{bmatrix*}$
+
+    \]
+    \end{center}
+    This is equal to:
+    \begin{center}
+        \[
+            $[x]_B = \begin{bmatrix*}[r] 2 & -1\\ 1 & 1 \end{bmatrix*}\begin{bmatrix*}[r] 
+             c_1\\c_2  \end{bmatrix*}
+            $
+        \]
+    \end{center}
+
+    Now just just find $c_1$ and $c_2$.
+
+    \begin{center}
+        \[
+            $ [x]_B = 
+                \begin{bmatrix*}[r]
+                    3 \\2
+                \end{bmatrix*}
+            $
+
+        \]
+    \end{center}
+
+    In this example, the matrix $\begin{bmatrix*}[r] 2 & -1\\ 1 & 1\end{bmatrix*}$ changes the $B$-coordinates into the standard coordinates of  $x$. This is known as the \textbf{change of coordinates} matrix. 
+
+    \subsection*{Definition: Change of Coordinates Matrix}
+    Let \\
+    \begin{center}
+        
+    $P_B = \{b_1,...,b_n\}$\\
+    \end{center}
+    
+
+    Then the vector equation $[x]_B=c_1b_1+...+c_nb_n $
+    is equivalent to:\\
+    \begin{center}
+        
+        $x = P_B[x]_B$
+    \end{center}
+
+    \subsection*{Theorem 8}
+    Let $B = \{b_1,...,b_n\}$ be a basis for a vector space $V$. Then the coordinate mapping $x \mapsto [x]_B$ is one-to-one and on-to from V onto $\mathbb{R}^n$.
+
+    \section*{4.5 The Dimension of a Vector Space}
+    \subsection*{Theorem 9}
+    If a Vector space $V$ has a basis $B = \{b_1,...,b_n\}$ then any set in $V$ containing more than $n$ vectors is linearly dependent.
+    
+    \subsection*{Definition: Dimension}
+    In terms of MATH240, $dim V $ is the number of vectors in a basis for  $V$.
+    \subsection*{Theorem 11}
+    Let $H$ be a subspace of vector space $V$. \\
+    \begin{center}
+        $dimH\leq dimV$
+    \end{center}
+    \subsection*{Theorem 12}
+    \textbf{The Basis Theorem}\\
+    Let $V$ be a $p$-dimensional vector space where $p\geq_1$. Any linearly independent set of exactly $p$ elements in $V$ is automatically a basis for $V$.
+    \subsection*{Conclusion}
+    Just know that dimension is the number of vectors in a basis.
+
+    \section*{4.6}
+    
+
+    \subsection*{Theorem 13}
+    If two matrices $A$ and $B$ are row equivalent, then their row spaces will also be equivalent. If $B$ is in echelon form, then the nonzero rows of B will be equal to the row space of $B$.
+
+
+
+    \subsection*{Definition: Rank }
+    The \textbf{Rank} of $A$ is the dimension of the column space of $A$.
+
+     \subsection*{Theorem 14: The Rank Theorem}
+     \begin{center}
+     $rank A + dim(Nul A) = n $\\
+    \end{center}
+    in an $m\times n$ matrix.
+
+    \subsection*{Conclusion}
+    Remember Rank theorem & row space.
+
+    \section*{4.7 Change of Basis}
+    \subsection*{Theorem 15}
+    Let $B = \{b_1,...,b_n\}$ and $C = \{c_1,...,c_n\}$ be bases in vector space $V$. Then there exists 
+    a unique $n\times n $ matrix $\underset{C\leftarrow B}{P}$ such that:
+    \begin{center}
+        $
+        [x]_C = \underset{C\leftarrow B}{P} [x]_B
+        $
+    \end{center}
+    The columns in $\underset{C\leftarrow B}{P}$ are the $C$-coordinate vectors of the vectors in the basis of $B$. That is:
+    \begin{center}
+        \underset{C\leftarrow B}{P} = \begin{bmatrix*}[b_1]_C ... [b_n]_C \end{bmatrix*}
+    \end{center}
+
+    The 
+\end{document}
+
+

@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{mathtools}
+\title{Chapter 6}
+\author{Brian Huang}
+\date{December 4, 2023}
+\begin{document}
+   \maketitle
+
+   \newpage
+   \section*{6.7 Least-Squares Problem}
+    
+   \subsection*{Definition}
+   If $A$ is $m*n$ matrix and  $b$ is in $\mathbb{R}^m$, a least-squares problem of $Ax=b$ is an $\hat{x}$ in $\mathbb{R}^n$ such that
+   \begin{center}
+       $\left \| b - A\hat{x} \right \| \leq \left \| b - Ax  \right \|$
+   \end{center}
+   for all $x$ in $\mathbb{R}^n$ .\\
+
+  \subsection*{Theorem 13}
+  The set of least squares solutions of $Ax = b$ coincides with the non-empty set of solutions of the equations:  $A^TAx=A^Tb$ \\
+
+  \subsection*{Theorem 14}
+  Let $A$ be an $n*n$ matrix. TFAE:\\
+  a. the equation $Ax=b$ has a unique least-squares solution for each $b$ in $\mathbb{R}^n$.\\
+  b. The columns of  $A$ are linearly independent.\\
+  c. The Matrix $A^TA$ is invertible.\\
+  
+When these statements are true, the least-squares solution $\hat{x}$ is given by:\\
+  
+  \begin{center}
+      
+   $\hat{x} = (A^TA)^{-1}A^Tb$
+\end{center} 
+
+
+\subsection*{Theorem 15}
+Given an $m*n$ matrix A with linearly indepedent columns, let $A = QR$ be a  $QR$ factorization of $A$ as in Theorem 12. Then for each $b$ in $\mathbb{R}^n$, the equation $Ax = b $ has a unique least-squares solution given by:
+\begin{center}
+    $\hat{x} = R^{-1} Q^Tb$
+\end{center}
+
+
+\subsection*{Conclusion}
+In summary, The least squares solution aims to find the smallest $\left \|  b-Ax \right \|$.\\
+To find it we use the equation from \textbf{Theorem 14} to find $\hat{x}$ which is the least squares solutions.\\
+You can also use QR factorization to find the least squares solution as well. This time, use \textbf{Theorem 15} to find the least squares solution.
+However, the equation from \textbf{Theorem 14} still works regardless.
+
+
+\end{document}

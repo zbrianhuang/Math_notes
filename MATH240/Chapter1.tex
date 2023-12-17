@@ -1,0 +1,66 @@
+\documentclass{article}
+\title{Chapter 1}
+\author{Brian Huang}
+\date{December 1 2023}
+\usepackage{mathtools}
+\begin{document}
+    \maketitle
+    \newpage 
+    \section*{1.1 System of Linear Equations}
+
+        
+    A linear equation in the variables $x_1,x_2,...,x_n$ is an equation that can be written 
+    as:
+    \begin{center}
+        
+    
+    $a_1x_1+a_2x_2+...+a_nx_n=b$
+    
+    \end{center}
+    where $a_1,a_2,a_n,b$ are real or complex numbers.
+    
+
+    \textbf{Example 1:}
+    \begin{center}
+        $2x_1-5x_2+2=x_1\\
+        x_1-5x_2+2=0\\
+        x_1-5x_2=-2
+
+    \end{center}
+
+A solution of the system is a list $(s_1,...,s_n)$ of numbers that makes each equation true when $(s_1,...,s_n)$ are plugged into $(x_1,...,x_n)$.
+    \\
+    \begin{center}
+        \fbox{
+            \begin{minipage}{15em}
+            A system of linear equations has:
+            1. No solutions\\
+            2. One solution\\
+            3. Many solutions\\
+            \end{minipage}
+        }
+    \end{center}
+A system of linear equations is said to be consistent if it has one or many solutions, an inconsistent system has no solutions.
+
+\subsection*{Matrix Notation}
+The essential information of a linear system can be recorded in a matrix.
+
+\textbf{Example}
+\\Given:
+    \begin{center}
+        $x_1 - x_2 + x_3 = 0$\\
+         $2x_2-8x_3=8$\\
+         $5x_1-5x_3=10$
+    \end{center}
+
+    the coefficents can be aligned in columns into:
+    \begin{center}
+        
+        \begin{bmatrix*}[l]
+            1\phantom{-} & \llap{$-$}1 & 1\\
+            0 & 2 & \llap{$-$}8\\
+            5 & 0 & \llap{$-$}5
+    \end{bmatrix*}
+    \end{center}    
+
+\end{document}
