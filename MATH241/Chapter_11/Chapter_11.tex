@@ -1,10 +1,10 @@
 % This is a simple sample document.  For more complicated documents take a look in the exercise tab. Note that everything that comes after a % symbol is treated as comment and ignored when the code is compiled.
 
 \documentclass{article} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
-
+\setlength\parindent{0pt}
 \usepackage{amsmath} % \usepackage is a command that allows you to add functionality to your LaTeX code
 
-\title{MATH240 Chapter 11} % Sets article title
+\title{MATH241 Chapter 11} % Sets article title
 \author{Brian Huang} % Sets authors name
 \date{December 17, 2023} % Sets date for date compiled
 
@@ -13,6 +13,87 @@
     \maketitle
     \newpage
     \section*{11.1 Cartesian Coordinates in Space} 
+    
+    Given a point in 3 dimensional space $P$, then there are 3 planes that intersect $P$
+    and are perpendicular to the x, y, and z axis.
+    \\
+    So, $P$ can be associated with an ordered triple of numbers $(x,y,z)$.
+    This way of writing $P$ is called the rectangular, or Cartesian, coordinates.
+    \\
+    \subsection*{Distance}
+    The distance between two points, $P$ and $Q$, can be found using the equation:
+    \begin{center}
+        $|PQ| = \sqrt{(x_1-x_0)^2+(y_1-y_0)^2+(z_1-z_0)^2}$
+        
+    \end{center}
+    Some other notes:
+    \begin{center}
+        $|PQ|=0$ iff $P=Q$\\
+        $|PQ| = |QP|$\\
+        $|PQ| \leq |PR|+|RQ|$ for any third point $R$
+        
+        
+    \end{center}
+    
+\section*{11.2 Vectors in Space}
+
+    \subsection*{Definition: Vector}
+    A vector is an ordered triple $(a_1,a_2,a_3)$ of numbers. The numbers $a_1,a_2$, and $a_3$
+    are called the components of the vector. The vector $\vec{PQ}$ associated with the directed
+    line segement with the inital point $P = (x_0,y_0,z_0)$ and the terminal point $Q = (x_1,y_1,z_2)$
+    is $(x_1-x_0,y_1-y_0,z_1-z_0)$
+
+    \subsection*{Definition: Norm}
+    The length(norm) of a vector $a = (a_1,a_2,a_3)$ is denoted as $\|a\|$ is defined as:
+    \begin{center}
+        $\|a\|=\sqrt{a^2_1+a^2_2+a^2_3}$
+        
+    \end{center}
+    A \textbf{Unit Vector} is a vector with a norm of 1.
+
+    Some special unit vectors:\\
+    $i = (1,0,0)$\\
+    $j = (0,1,0)$\\
+    $k = (0,0,1)$\\
+    A vector $a=(a_1,a_2,a_3)$ can be written as:
+    \begin{center}
+        $a = a_1i+a_2j+a_3k$
+        
+    \end{center}
+
+
+    \subsection*{Vector Operations}
+    Let $a = (a_1,a_2,a_3)$, $b = (b_1,b_2,b_3)$ and $c$ be a scalar.
+
+    \begin{center}
+        $a+b = (a_1+b_1,a_2+b_2,a_3+b_3)$\\
+        $a-b = (a_1-b_1,a_2-b_2,a_3-b_3)$\\
+        $ca=(ca_1,ca_2,ca_3)$
+        
+    \end{center}
+    
+    There are four ways to describe a vector:
+    1. as $(a_1,a_2,a_3)$, an ordered triple of numbers\\
+    2. as $(a_1,a_2,a_3)$, a point in space\\
+    3. as a directed line segment with an initial point at $(x_0,y_0,z_0)$ and a terminal point at $(x_0+a_1,y_0+a_2,z_0+a_3)$\\
+    4. as $a_1i+a_2j+a_3k$
+
+    \subsection*{Parallel Vectors}
+    Two nonzero vectors $a$ and $b$ are parllel iff there is exists a scalar $c$ such that
+    $b = ca$.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
