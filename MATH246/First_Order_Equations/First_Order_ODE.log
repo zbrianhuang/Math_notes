@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  21 DEC 2023 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  18 DEC 2023 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/zbria/Documents/GitHub/Math_notes/MATH241/Chapter_11/Chapter_11.tex
-(c:/Users/zbria/Documents/GitHub/Math_notes/MATH241/Chapter_11/Chapter_11.tex
+**c:/Users/zbria/Documents/GitHub/Math_notes/MATH246/First_Order_Equations/First_Order_ODE.tex
+(c:/Users/zbria/Documents/GitHub/Math_notes/MATH246/First_Order_Equations/First_Order_ODE.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30> (C:\Users\zbria\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -90,53 +90,38 @@ LaTeX Info: Redefining \] on input line 2954.
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box53
-) (Chapter_11.aux)
-\openout1 = `Chapter_11.aux'.
+) (First_Order_ODE.aux)
+\openout1 = `First_Order_ODE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
  [1
 
-{C:/Users/zbria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 17--23
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-[3] (Chapter_11.aux) ) 
+{C:/Users/zbria/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (First_Order_ODE.aux) ) 
 Here is how much of TeX's memory you used:
- 1179 strings out of 476331
- 18692 string characters out of 5787765
- 1859660 words of memory out of 5000000
- 21668 multiletter control sequences out of 15000+600000
- 517670 words of font info for 51 fonts, out of 8000000 for 9000
+ 1171 strings out of 476331
+ 18726 string characters out of 5787765
+ 1850660 words of memory out of 5000000
+ 21662 multiletter control sequences out of 15000+600000
+ 515996 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,62p,318b,192s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Chapter_11.pdf (3 pages, 131471 bytes).
+ 56i,6n,62p,334b,194s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zbria/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on First_Order_ODE.pdf (1 page, 34180 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
